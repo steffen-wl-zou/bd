@@ -4,9 +4,9 @@ library(jsonlite)
 library(lubridate)
 library(stringr)
 
-today = Sys.Date()
 number_of_months = 6
-five_months_ago = today %m-% months(number_of_months-1)
+today = Sys.Date()
+five_months_ago = today %m-% months(5)
 end_date_input = format(five_months_ago, "%Y-%m")
 start_date = five_months_ago %m-% months(number_of_months-1)
 start_date_input = format(start_date, "%Y-%m")
@@ -40,8 +40,8 @@ destination_country_id = 1880251
         rm("output_dir")
     }
     
-    readline(prompt = "Press Enter/Return to start selecting any file. Will only use the folder path from your selection to download result files from API calls: ")
-    output_dir = dirname(file.choose())
+    readline(prompt = "Press Enter/Return to start selecting the folder to use for download result file to from API call. Click Save to confirm selection: ")
+    output_dir = dirname(file.choose(new=TRUE))
     cat(paste0('You have selected "', output_dir,'".\n\n'))
     
     
