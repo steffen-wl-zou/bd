@@ -3,10 +3,11 @@ library(jsonlite)
 library(lubridate)
 library(stringr)
 
+number_of_months = 6
 today = Sys.Date()
 five_months_ago = today %m-% months(5)
 end_date_input = format(five_months_ago, "%Y-%m")
-start_date = five_months_ago %m-% months(5)
+start_date = five_months_ago %m-% months(number_of_months-1)
 start_date_input = format(start_date, "%Y-%m")
 
 {
