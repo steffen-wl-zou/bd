@@ -21,8 +21,8 @@ start_date_input = format(start_date, "%Y-%m")
         rm("output_dir")
     }
     
-    readline(prompt = "Press Enter/Return to start selecting any file. Will only use the folder path from your selection to download result file from API call: ")
-    output_dir = dirname(file.choose())
+    readline(prompt = "Press Enter/Return to start selecting the folder to use for download result file to from API call. Click Save to confirm selection: ")
+    output_dir = dirname(file.choose(new=TRUE))
     cat(paste0('You have selected "', output_dir,'".\n\n'))
     
     # call API
