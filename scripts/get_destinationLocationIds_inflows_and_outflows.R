@@ -56,8 +56,8 @@ destination_country_id = 1880251
     api_key = readline(prompt = "Enter your API key: ")
     
     # create a transit hub dataframe
-    origin_country_id <- min(origin_df$originCountryId)
-    originCountryName <- min(origin_df$originCountryName)
+    origin_country_id <- origin_df$originCountryId[1]
+    originCountryName <- origin_df$originCountryName[1]
     
     transit_hub_df <- 
         origin_df %>%
