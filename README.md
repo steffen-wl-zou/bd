@@ -3,12 +3,6 @@ Location ID of countries can get from https://www.geonames.org/countries/
 2. At the webpage of that country, click on the hyperlink named after the country name (at the "country name" field. e.g. Singapore). You will be redirected to another webpage on that country.
 3. The Location ID is at the URL (e.g. Location ID 1880251 from the URL https://www.geonames.org/1880251/singapore.html).
 
-**scripts/get_inflows_to_country.R**
-* For calling API to get inflow air travel volume to a country within a 6 months period from the start of 10 months ago till the end of 5 months ago (the most recent data available).
-* Prompts for your API key.
-* Prompts for location ID of country (i.e. destination country location ID).
-* Prompts for the folder path to download result file from API call.
-
 **scripts/get_country_outflows.R**
 * For calling API to get a country's outflows air travel volume within a 6 months period from the start of 10 months ago till the end of 5 months ago (the most recent data available).
 * Prompts for your API key.
@@ -37,6 +31,12 @@ Location ID of countries can get from https://www.geonames.org/countries/
 * Prompts for the outflow csv file to use for getting destinationLocationIds to each call API for inflows and outflows.
 * Prompts for the folder path to download result file from API call (and also to output transit_hubs.csv).
 * Prompts for your API key.
+
+**scripts/get_inflows_to_country.R**
+* For calling API to get inflow air travel volume to a country within a 6 months period from the start of 10 months ago till the end of 5 months ago (the most recent data available).
+* Prompts for your API key.
+* Prompts for location ID of country (i.e. destination country location ID).
+* Prompts for the folder path to download result file from API call.
   
 **scripts/get_from_originLocationId_to_destinationLocationId.R**
 * For calling API to get air travel volume from an origin country to a destination country within a 6 months period from the start of 10 months ago till the end of 5 months ago (the most recent data available).
